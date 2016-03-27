@@ -130,7 +130,7 @@ static int msm_ispif_reset_hw(struct ispif_device *ispif)
 	CDBG("%s: VFE0 done\n", __func__);
 	if (timeout <= 0) {
 		pr_err("%s: VFE0 reset wait timeout\n", __func__);
-#if defined(CONFIG_MACH_MSM8226_E7WIFI)
+#if defined(CONFIG_MACH_MSM8226_E7WIFI) || defined(CONFIG_MACH_MSM8226_E8WIFI)
 	if (ispif->hw_num_isps > 1)
 #endif
 		msm_cam_clk_enable(&ispif->pdev->dev,
